@@ -32,7 +32,7 @@
 }
 html,body{height:100%;overflow:hidden;background:#0E3D63}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;-webkit-font-smoothing:antialiased;color:var(--text)}
-.shell{position:fixed;top:0;left:0;right:0;height:100vh;height:100dvh;display:flex;flex-direction:column;background:var(--bg);max-width:430px;margin:0 auto;overflow:hidden;box-shadow:0 0 80px rgba(0,0,0,.45)}
+.shell{position:fixed;top:0;left:0;right:0;height:100vh;height:100dvh;height:var(--app-h,100dvh);display:flex;flex-direction:column;background:var(--bg);max-width:430px;margin:0 auto;overflow:hidden;box-shadow:0 0 80px rgba(0,0,0,.45)}
 .hidden{display:none!important}
 .serif{font-family:'Playfair Display',serif}
 .eyebrow{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep)}
@@ -1206,6 +1206,19 @@ document.getElementById('lp').addEventListener('keydown',function(e){if(e.key===
 /* Customer-facing demo: no login, client view only */
 demoMode=true;currentUser=null;
 enterPortal('client');
+</script>
+<script>
+/* Size the app to the truly visible screen area (handles Safari/Chrome toolbars) */
+(function(){
+  function setH(){
+    var h = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+    document.documentElement.style.setProperty('--app-h', h + 'px');
+  }
+  setH();
+  window.addEventListener('resize', setH);
+  window.addEventListener('orientationchange', setH);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', setH);
+})();
 </script>
 </body>
 </html>
