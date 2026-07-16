@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haven's Honey Do's — Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #2B4570;
+      --sage:   #2D8B6F;
+      --cream:  #FAF9F4;
+      --gold:   #C9A452;
+      --text:   #1C2B42;
+      --sub:    #6B7A8D;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* Subtle honeycomb background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='52' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 17.3 L60 34.7 L30 52 L0 34.7 L0 17.3 Z' fill='none' stroke='%232B4570' stroke-opacity='0.045' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 60px 52px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 48px rgba(43,69,112,0.12), 0 2px 8px rgba(43,69,112,0.06);
+      padding: 52px 56px 48px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Top accent bar */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      border-radius: 24px 24px 0 0;
+      background: linear-gradient(90deg, var(--navy) 0%, var(--sage) 60%, var(--gold) 100%);
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 8px;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .brand span {
+      color: var(--sage);
+    }
+
+    .tagline {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--sub);
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+
+    /* QR wrapper */
+    .qr-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      border: 1.5px solid rgba(43,69,112,0.1);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    #qrcode {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #qrcode canvas,
+    #qrcode img {
+      border-radius: 8px;
+    }
+
+    .cta {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .url {
+      font-size: 12px;
+      color: var(--sub);
+      word-break: break-all;
+      font-weight: 400;
+    }
+
+    .divider {
+      margin: 28px 0;
+      border: none;
+      border-top: 1px solid rgba(43,69,112,0.09);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .bee {
+      font-size: 18px;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: var(--sub);
+      font-weight: 400;
+    }
+
+    .footer-text strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* Credentials hint */
+    .creds {
+      margin-top: 16px;
+      background: rgba(43,69,112,0.04);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: var(--sub);
+      line-height: 1.7;
+    }
+
+    .creds strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    @media print {
+      body { background: #fff; }
+      body::before { display: none; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="eyebrow">Live Demo</p>
+    <h1 class="brand">Haven's <span>Honey Do's</span></h1>
+    <p class="tagline">Your home, handled. Scan to explore the app.</p>
+
+    <div class="qr-wrap">
+      <div id="qrcode"></div>
+    </div>
+
+    <p class="cta">Scan to try it on your phone</p>
+    <p class="url">enjoyyourhaven.github.io/haven-demo</p>
+
+    <hr class="divider">
+
+    <div class="footer-row">
+      <span class="bee">🐝</span>
+      <p class="footer-text"><strong>Haven Property Services</strong> · Dallas–Fort Worth</p>
+    </div>
+
+
+  </div>
+
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://enjoyyourhaven.github.io/haven-demo/",
+      width: 220,
+      height: 220,
+      colorDark: "#2B4570",
+      colorLight: "#FAF9F4",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
