@@ -315,6 +315,40 @@
     }
     .woman-owned::before, .woman-owned::after { content: ' — '; color: var(--border); }
 
+    
+    .tile-demo-btn {
+      display: inline-block;
+      margin-top: 14px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    .t2 .tile-demo-btn, .t4 .tile-demo-btn { background: var(--sage); }
+    .t3 .tile-demo-btn, .t5 .tile-demo-btn { background: var(--gold); color: var(--navy); }
+
+    
+    .tile-link { display:block; text-decoration:none; transition:transform 0.15s ease, box-shadow 0.15s ease; }
+    .tile-link:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(43,69,112,0.13); }
+    .chev-go { flex-shrink:0; width:22px; height:22px; color:var(--taupe); }
+
+    
+    .tile-copy { padding: 0 20px 4px; font-size: 14.5px; color: var(--sub); }
+    .tile-copy strong { color: var(--text); font-weight: 600; }
+    .tile-go {
+      display: block;
+      margin-top: 16px;
+      background: var(--gold);
+      color: var(--navy);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 15px 20px;
+    }
+
     .copyright {
       text-align: center;
       margin-top: 28px;
@@ -335,87 +369,65 @@
     </header>
 
     <h2 class="section-title">Is this you?</h2>
-    <p class="section-sub">Or someone you love? Tap to see how Haven helps.</p>
+    <p class="section-sub">Or someone you love? Tap your card to try the app made for you.</p>
 
-    <div class="tiles">
-
-      <div class="tile t1">
-        <button class="tile-head" onclick="toggle(this)">
+        <div class="tiles">
+      <a class="tile t1 tile-link" href="https://enjoyyourhaven.github.io/haven-demo/demo-safety.html">
+        <div class="tile-head">
           <div class="tile-icon">🛡️</div>
           <div class="tile-label">
             <h3>Handling your home on your own?</h3>
             <span>Safety and trust come first</span>
           </div>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="tile-body"><div class="tile-body-inner">
-          You should never wonder who's in your home. Haven is <strong>woman-owned and safety-led</strong> — the same vetted, background-checked technician every visit, someone you know by name. Honest work at honest prices, with <strong>no pressure and no being taken advantage of. Ever.</strong>
-        </div></div>
-      </div>
-
-      <div class="tile t2">
-        <button class="tile-head" onclick="toggle(this)">
+        </div>
+        <div class="tile-copy">You should never wonder who's in your home. Haven is <strong>woman-owned and safety-led</strong> — the same vetted, background-checked technician every visit, someone you know by name. Honest work at honest prices, with <strong>no pressure and no being taken advantage of. Ever.</strong></div>
+        <div class="tile-go">Try your demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;vertical-align:-2px"><path d="M9 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="tile t2 tile-link" href="https://enjoyyourhaven.github.io/haven-demo/demo.html">
+        <div class="tile-head">
           <div class="tile-icon">🔑</div>
           <div class="tile-label">
             <h3>First home? Congratulations!</h3>
             <span>We'll help you learn it</span>
           </div>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="tile-body"><div class="tile-body-inner">
-          Nobody hands you an owner's manual at closing — so we become it. Your technician teaches you your home as we care for it, with <strong>transparent recommendations: what needs doing now, and what can wait</strong>. Every visit is documented, so your home's story is written down from day one.
-        </div></div>
-      </div>
-
-      <div class="tile t3">
-        <button class="tile-head" onclick="toggle(this)">
+        </div>
+        <div class="tile-copy">Nobody hands you an owner's manual at closing — so we become it. Your technician teaches you your home as we care for it, with <strong>transparent recommendations: what needs doing now, and what can wait</strong>. Every visit is documented, so your home's story is written down from day one.</div>
+        <div class="tile-go">Try the demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;vertical-align:-2px"><path d="M9 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="tile t3 tile-link" href="https://enjoyyourhaven.github.io/haven-demo/demo-family.html">
+        <div class="tile-head">
           <div class="tile-icon">🎈</div>
           <div class="tile-label">
-            <h3>Juggling kids, career & a home?</h3>
+            <h3>Juggling kids, career &amp; a home?</h3>
             <span>Get your weekends back</span>
           </div>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="tile-body"><div class="tile-body-inner">
-          The honey-do list shouldn't compete with your family for weekend time. Haven works quietly in the background — <strong>no chasing contractors, no waiting on quotes, no small problems becoming big ones</strong>. One less thing on your plate. You just enjoy your haven.
-        </div></div>
-      </div>
-
-      <div class="tile t4">
-        <button class="tile-head" onclick="toggle(this)">
+        </div>
+        <div class="tile-copy">The honey-do list shouldn't compete with your family for weekend time. Haven works quietly in the background — <strong>no chasing contractors, no waiting on quotes, no small problems becoming big ones</strong>. One less thing on your plate. You just enjoy your haven.</div>
+        <div class="tile-go">Try your demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;vertical-align:-2px"><path d="M9 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="tile t4 tile-link" href="https://enjoyyourhaven.github.io/haven-demo/demo-senior.html">
+        <div class="tile-head">
           <div class="tile-icon">🌷</div>
           <div class="tile-label">
             <h3>Staying in the home you love?</h3>
             <span>Care with dignity</span>
           </div>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="tile-body"><div class="tile-body-inner">
-          Your home holds your life's memories — you shouldn't have to leave it to keep it. A <strong>familiar, trusted face</strong> handles the ladders, the filters, the little fixes, and keeps an eye on the things that keep you safe. Independence, supported. And your family gets peace of mind, too.
-        </div></div>
-      </div>
-
-      <div class="tile t5">
-        <button class="tile-head" onclick="toggle(this)">
+        </div>
+        <div class="tile-copy">Your home holds your life's memories — you shouldn't have to leave it to keep it. A <strong>familiar, trusted face</strong> handles the ladders, the filters, the little fixes, and keeps an eye on the things that keep you safe. Independence, supported. And your family gets peace of mind, too.</div>
+        <div class="tile-go">Try your demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;vertical-align:-2px"><path d="M9 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="tile t5 tile-link" href="https://enjoyyourhaven.github.io/haven-demo/demo.html">
+        <div class="tile-head">
           <div class="tile-icon">🎁</div>
           <div class="tile-label">
             <h3>New build? Haven came with it?</h3>
             <span>Your builder chose well</span>
           </div>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="tile-body"><div class="tile-body-inner">
-          If your builder gifted you Haven, here's what that means: <strong>we handle your first-year warranty items</strong> and learn your home from day one — every system, every finish, every quirk. By year two, you'll wonder how anyone owns a home without us.
-        </div></div>
-      </div>
+        </div>
+        <div class="tile-copy">If your builder gifted you Haven, here's what that means: <strong>we handle your first-year warranty items</strong> and learn your home from day one — every system, every finish, every quirk. By year two, you'll wonder how anyone owns a home without us.</div>
+        <div class="tile-go">Try the demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:15px;height:15px;vertical-align:-2px"><path d="M9 6l6 6-6 6"/></svg></div>
+      </a>
 
-    </div>
-
-    <div class="demo-cta">
-      <h3>See it for yourself</h3>
-      <p>Explore the Haven app — tasks, scheduling, visit reports, and your home's full story in one place.</p>
-      <a class="demo-btn" href="https://enjoyyourhaven.github.io/haven-demo/" target="_blank" rel="noopener">Try the Demo →</a>
-      <div class="demo-note">Opens in a new tab — tap around, it's yours to explore</div>
     </div>
 
     <div class="contact">
@@ -440,13 +452,6 @@
 
   </div>
 
-  <script>
-    function toggle(btn) {
-      const tile = btn.closest('.tile');
-      const wasOpen = tile.classList.contains('open');
-      document.querySelectorAll('.tile.open').forEach(t => t.classList.remove('open'));
-      if (!wasOpen) tile.classList.add('open');
-    }
-  </script>
+  
 </body>
 </html>
