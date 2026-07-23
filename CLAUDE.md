@@ -15,7 +15,7 @@ Any commit to `main` publishes within ~2 minutes.
 - `demo-safety.html` — persona demo: Rachel Torres (independent woman; safety emphasis).
 - `demo-family.html` — persona demo: Jessica Alvarez (busy family; kid-related tasks).
 - `demo-senior.html` — persona demo: Eleanor Whitfield (senior; grab bars/threshold tasks, larger simple fonts for readability).
-- `safety-first.html` — landing page: The Single Woman (sovereignty/safety messaging; CTA "Book Your Visit").
+- `safety-first.html` — landing page: The Single Woman (capability/safety messaging — her home, on her terms; CTA "Book Your Visit").
 - `first-year.html` — landing page: First-Time Home Buyer (CTA "Book Your First-Year Walkthrough").
 - `busy-families.html` — landing page: Young Busy Family (CTA "Book Your Visit · Recurring Plans").
 - `staying-home.html` — landing page: Senior Aging in Place + adult children ("For sons & daughters" section; CTA "Book a Home Safety Visit").
@@ -28,7 +28,7 @@ Any commit to `main` publishes within ~2 minutes.
 - Voice: warm, dignified, safety-forward, never salesy. Key phrases: "make your home your haven," "woman-owned · safety-led," "the house stops winning."
 
 ## The five client personas (drive all marketing decisions)
-1. **Single woman homeowner** — emotional core: sovereignty/autonomy. Trust: background checks first.
+1. **Single woman homeowner** — emotional core: capability and independence — her home, on her terms. Trust: background checks first.
 2. **First-time buyer** — wants a crash course; "first-year walkthrough" offer; anti-upsell promise.
 3. **Busy family** — "a managed thing, not a recurring argument"; recurring visits; kids-safe vetting.
 4. **Senior aging in place** — dual audience (senior + adult child decision-maker); dignity; documented visits; "home safety visit" offer.
